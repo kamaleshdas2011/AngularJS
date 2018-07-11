@@ -1,0 +1,155 @@
+﻿<style>
+    #placeList li {
+        padding: 0 0 5px 0;
+    }
+</style>
+<form ng-submit="AddPlace(addPlace.$valid)" name="addPlace">
+    <div class="form-horizontal">
+        <!--<h4>Places</h4>-->
+        <!--<hr />-->
+        <div class="form-group row">
+            <label class="control-label col-md-1">Name</label>
+            <div class="col-md-7">
+                <input type="text" class="form-control" name="name" ng-model="place.Name" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-1">State</label>
+            <div class="col-md-5">
+                <!--<select class="form-control" ng-model="place.State">
+                    <option value="" selected disabled>Select State</option>
+                    <option ng-repeat="st in states" value="{{st.id}}">{{st.name}}</option>
+                </select>-->
+                <select ng-options="st.name for st in states"
+                        class="form-control" ng-model="place.State">
+                    <option value="" selected disabled>Select State</option>
+                </select>
+            </div>
+            <label class="control-label col-md-1">Parent Places</label>
+            <div class="col-md-5">
+                <select ng-options="pl.Name for pl in places" class="form-control" ng-model="place.ParentPlace"
+                        name="ParentPlace">
+                    <option value="" selected disabled>Select Parent</option>
+                </select>
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label class="control-label col-md-2">Parent Places</label>
+            <div class="col-md-10">
+                <select ng-options="pl.Name for pl in places" class="form-control" ng-model="place.ParentPlace"
+                        name="ParentPlace">
+                    <option value="" selected disabled>Select Parent</option>
+                </select>
+            </div>
+        </div>-->
+        <div class="form-group row">
+            <label class="control-label col-md-1">Sequence</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control" name="Sequence" ng-model="place.Sequence" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-md-2">Title Color</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control" name="titleColor" ng-model="place.titleColor" />
+            </div>
+            <label class="control-label col-md-2">Text Color</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control" name="textColor" ng-model="place.textColor" />
+            </div>
+            <label class="control-label col-md-2">State Color</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control" name="stateColor" ng-model="place.stateColor" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-md-2">Title font</label>
+            <div class="col-md-2">
+                <select ng-options="f.Name for f in fonts"
+                        class="form-control" ng-model="place.TitleFontFamily">
+                    <option value="" selected disabled>Select title font</option>
+                </select>
+            </div>
+            <label class="control-label col-md-2">Text font</label>
+            <div class="col-md-2">
+                <select ng-options="f.Name for f in fonts"
+                        class="form-control" ng-model="place.TextFontFamily">
+                    <option value="" selected disabled>Select text font</option>
+                </select>
+            </div>
+            <label class="control-label col-md-2">State font</label>
+            <div class="col-md-2">
+                <select ng-options="f.Name for f in fonts"
+                        class="form-control" ng-model="place.StateFontFamily">
+                    <option value="" selected disabled>Select state font</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="TopPlace" ng-model="place.TopPlace" />Set to Top
+                    </label>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="col4" ng-model="place.col4" />Set to Col-4
+                    </label>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="col6" ng-model="place.col6" />Set to Col-6
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input ng-show="!seeUpdate" type="submit" value="Add" class="btn btn-success" />
+                <button type="button" ng-show="seeUpdate" ng-click="startUpdate()" class="btn btn-dark">Update</button>
+                <input type="button" ng-click="resetForm()" value="Reset" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    {{place|json}}
+</form>
+<div id="placeList">
+    <ul>
+        <li ng-repeat="pl in places">
+            {{pl.Name}} | {{pl.State.name}}
+            <!--<div modify updateitem="update(pl.Id)" deleteitem="delete(pl.Id)">Update</div>-->
+            <!--data-toggle="modal" data-target="#confirmDeleteModal"-->
+            <button class="btn btn-dark btn-sm" ng-click="update(pl)">Update</button>
+            <button class="btn btn-danger btn-sm" ng-click="delete(pl)">Delete</button>
+
+
+        </li>
+    </ul>
+</div>
+<div class="modal fade" id="confirmModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" ng-click="deletet()">Yes remove</button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary btn-sm">Don't remove</button>
+
+            </div>
+        </div>
+    </div>
+</div>

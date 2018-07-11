@@ -1,0 +1,44 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Sarpanch:900|Acme|Amatic+SC|Dancing+Script|Kaushan+Script|Monoton|Pacifico|Permanent+Marker');
+
+.s1 {
+    font-size: 6vmin;
+    color: #1d9099;
+    text-shadow: .3vmin .3vmin 0 #E79C10, -.3vmin -.3vmin 0 #D53A33;
+}
+
+.tilt {
+    transform: skew(-12deg) rotate(-12deg);
+    grid-area: text;
+}
+
+.Pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.DancingScript {
+    font-family: 'Dancing Script', cursive;
+}
+
+.Acme {
+    font-family: 'Acme', sans-serif;
+}
+
+.AmaticSC {
+    font-family: 'Amatic SC', cursive;
+}
+
+.PermanentMarker {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.KaushanScript {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.Monoton {
+    font-family: 'Monoton', cursive;
+}
+
+.sarpanch {
+    font-family: 'Sarpanch', sans-serif;
+}

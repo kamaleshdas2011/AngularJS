@@ -1,0 +1,39 @@
+﻿<!--<script>
+        WebFont.load({
+            google: {
+                families: ['Amatic+SC', 'Kaushan+Script']
+            }
+        });
+</script>-->
+<style>
+    
+
+    .home-card .box-details {
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5vw;
+        opacity: 1;
+    }
+
+        .home-card .box-details .box-title {
+            font-weight: bold;
+        }
+
+        .home-card .box-details .box-text {
+            /*font-family: 'most wanted2';*/
+            font-size: 15px;
+        }
+</style>
+<div class="row home-card">
+    <div class="box" ng-class="{'col-md-4 col-lg-4 col-sm-6': box.col4, 'col-md-6 col-lg-6 col-sm-6': box.col6}"
+         ng-repeat="box in boxes" ui-sref="topplace({code: box.Id})">
+        <img ng-src="data:image/jpeg;base64,{{box.Photos[0].Photo}}" class="card-img" alt="box.title" />
+        <div class="box-details">
+            <div class="box-title {{box.TitleFontFamily.ClassName}}" style="color:{{box.titleColor}};">{{box.Name}}</div>
+            <div class="box-text {{box.StateFontFamily.ClassName}}" style="color:{{box.textColor}};">{{box.State.name}}</div>
+        </div>
+
+    </div>
+</div>

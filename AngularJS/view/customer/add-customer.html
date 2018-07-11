@@ -1,0 +1,101 @@
+﻿<style>
+    input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched,
+    select.ng-invalid.ng-touched {
+        background: #fff url(../images/invalid.png) no-repeat 98% center !important;
+        box-shadow: 0 0 2px #d45252;
+        background-size: 20px !important;
+        border-color: #b03535;
+    }
+
+    input.ng-valid.ng-touched, textarea.ng-valid.ng-touched,
+    select.ng-valid.ng-touched {
+        background: #fff url(../images/valid.png) no-repeat 98% center !important;
+        background-size: 20px !important;
+    }
+</style>
+<form ng-submit="addcust.$valid && formSubmit()" name="addcust" novalidate>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4"
+                   placeholder="Email" name="email" ng-model="customer.email" ng-required="true">
+
+            <div ng-show="addcust.$submitted || addcust.email.$touched">
+                <span class="text-danger" ng-show="addcust.email.$invalid">Enter proper email address</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Street/Locality</label>
+            <textarea class="form-control" placeholder="1234 Main St" id="inputAddress"
+                      ng-model="customer.address" name="address" ng-required="true"></textarea>
+            <div ng-show="addcust.$submitted || addcust.address.$touched">
+                <span class="text-danger" ng-show="addcust.address.$invalid">Enter locality</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress2">Area/Nearby</label>
+            <textarea class="form-control" id="inputAddress2" ng-required="false"
+                   placeholder="Apartment, studio, or floor" name="area" ng-model="customer.area"></textarea>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" ng-model="customer.selectedState" ng-options="st.name for st in states" name="state"
+                    ng-change="getCity();" class="form-control" ng-required="true">
+                <option selected value="" disabled>Select from list</option>
+
+            </select>
+            <div ng-show="addcust.$submitted || addcust.state.$touched">
+                <span class="text-danger" ng-show="addcust.state.$invalid">Select state</span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <select ng-model="customer.selectedCity" class="form-control" name="city"
+                    id="inputCity" ng-options="ct.name for ct in cities" ng-required="true">
+                <option selected value="" disabled>Select State first</option>
+
+            </select>
+            <div ng-show="addcust.$submitted || addcust.city.$touched">
+                <span class="text-danger" ng-show="addcust.city.$invalid">Select city</span>
+            </div>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input name="zip" type="text" class="form-control" id="inputZip"
+                   limit-to="6" placeholder="123456" ng-model="customer.zip" ng-required="true">
+            <div ng-show="addcust.$submitted || addcust.zip.$touched">
+                <span class="text-danger" ng-show="addcust.zip.$invalid">Enter ZIP</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Select Address Type</label>
+        <span ng-show="addcust.$submitted" class="error-msg">
+            <span class="text-danger" ng-show="addcust.addressType.$invalid">Select any one of the Address Type</span>
+        </span>
+        <div ng-repeat="type in addressTypes">
+            <div class="form-check">
+                <input type="checkbox" id="{{type}}"
+                       ng-model="addressType"
+                       ng-required="selectedAddress.length == 0"
+                       name="addressType"
+                       ng-click="updateAddressValue(type)">
+                <label for="{{type}}">{{type}}</label>
+            </div>
+            <!--<span>
+                <label class="form-check-label" for="{{type}}">
+                    {{type}}
+                </label>
+            </span>-->
+        </div>
+        {{addressType|json}}
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

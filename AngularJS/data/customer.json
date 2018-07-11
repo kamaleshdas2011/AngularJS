@@ -1,0 +1,74 @@
+﻿[
+  {
+    "id": "0001",
+    "firstName": "Kamalesh",
+    "lastName": "Das",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": " natural lead-in to additional content.",
+    "gender": "M"
+  },
+  {
+    "id": "0002",
+    "firstName": "John",
+    "lastName": "Papa",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": "Content",
+    "gender": "M"
+  },
+  {
+    "id": "0003",
+    "firstName": "Deepak",
+    "lastName": "Tarini",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": "Content",
+    "gender": "M"
+  },
+  {
+    "id": "0004",
+    "firstName": "Nitish",
+    "lastName": "Mishra",
+    "imageUrl": "../../images/child.png",
+    "role": "Content",
+    "gender": "M"
+  },
+  {
+    "id": "0005",
+    "firstName": "Leena",
+    "lastName": "Jacob",
+    "imageUrl": "../../images/woman.png",
+    "role": "Content",
+    "gender": "F"
+  },
+  {
+    "id": "0006",
+    "firstName": "Juliee",
+    "lastName": "Kumari",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": "Content",
+    "gender": "F"
+  },
+  {
+    "id": "0007",
+    "firstName": "Kamalesh",
+    "lastName": "Das",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": " natural lead-in to additional content.",
+    "gender": "M"
+  },
+  {
+    "id": "0008",
+    "firstName": "John",
+    "lastName": "Papa",
+    "imageUrl": "../../images/child.png",
+    "role": "Content",
+    "gender": "M"
+  },
+  {
+    "id": "0009",
+    "firstName": "Deepak",
+    "lastName": "Tarini",
+    "imageUrl": "../../images/img_avatar3.png",
+    "role": "Content",
+    "gender": "M"
+  }
+]

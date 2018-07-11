@@ -1,0 +1,300 @@
+﻿/* You can add global styles to this file, and also import other style files */
+.container{
+    padding:0 0px 0 0px;
+    /*margin-left:0;*/
+    /*margin-right:0;*/
+    /*min-width:100%;*/
+}
+.handtool {
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* Style the buttons */
+.mood-box .btn {
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+    .mood-box .btn:hover {
+        background-color: #ddd;
+    }
+
+    .mood-box .btn.active {
+        background-color: #666;
+        color: white;
+    }
+/*search box*/
+
+
+.cust-list {
+    padding-top: 20px;
+}
+/*toggle switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    .switch input {
+        display: none;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+/*customer cards*/
+div#info-card {
+    transition: all linear 0.2s;
+}
+
+#info-card.ng-hide {
+    opacity: 0;
+}
+
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+}
+
+.green {
+    color: lightgreen;
+}
+
+.none {
+    color: black;
+}
+
+/*input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    background: #fff url(../images/invalid.png) no-repeat 98% center !important;
+    box-shadow: 0 0 2px #d45252;
+    background-size: 20px !important;
+    border-color: #b03535;
+}
+
+input.ng-valid.ng-touched, textarea.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+    background: #fff url(../images/valid.png) no-repeat 98% center !important;
+    background-size: 20px !important;
+}*/
+
+/* .squaredTwo */
+.squaredTwo {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    background: #fcfff4;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+    .squaredTwo label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+    }
+
+        .squaredTwo label:after {
+            content: '';
+            width: 11px;
+            height: 7px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border: 2px solid #fcfff4;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            opacity: 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .squaredTwo label:hover::after {
+            opacity: 0.3;
+        }
+
+    .squaredTwo input[type=checkbox] {
+        visibility: hidden;
+    }
+
+        .squaredTwo input[type=checkbox]:checked + label:after {
+            opacity: 1;
+        }
+
+
+
+.parallax {
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: most wanted;
+    src: url('../media/Mostwasted.ttf');
+}
+
+@font-face {
+    font-family: most wanted2;
+    src: url('/media/Gotham Bold Regular.ttf');
+}
+.content-box {
+    height: 0px;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'most wanted2';
+    font-weight: bold;
+    position: relative;
+    /*right:20px;*/
+    /*left:250px;*/
+    /*color: chocolate;*/
+    top: 80px;
+}
+.desc-box {
+    position: absolute;
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+/*.ng-hide.ng-hide-animate {
+    display: none !important;
+}
+
+.ng-animate.no-animate {
+    transition: 0s none;
+    -webkit-transition: 0s none;
+    animation: 0s none;
+    -webkit-animation: 0s none;
+}*/
+.play {
+    /*transition:display linear 2s;*/
+    /*transition-timing-function:ease;
+    transition-delay:1s;
+    -webkit-transition:display 1s;
+    -webkit-transition-timing-function:ease;
+    -webkit-transition-delay:1s;*/
+}
+.home-card{
+    /*padding-top: 5%;*/
+}
+.home-card .box{
+    padding:0px 1px 1px 0px;
+    cursor:pointer;
+    position:relative;
+}
+.home-card img{
+    border-radius:0px;
+    opacity: 0.5;
+    min-width:100%;
+    min-height:100%;
+}
+.box{
+    transition:all 0.4s ease-in-out;
+}
+    .box:hover {
+        transform: scale(.98);
+    }
+
+
+
+.drag-box{
+    border:1px dashed;
+    height:200px;
+    background-color:aquamarine;
+}
+    .drag-box img {
+        height: 200px;
+    }

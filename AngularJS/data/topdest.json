@@ -1,0 +1,76 @@
+﻿[
+  {
+    "code": "purulia",
+    "url": "../images/westbengal/purulia/Turga-Waterfalls-2.jpg",
+    "title": "Purulia",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": true,
+    "col6": false
+  },
+  {
+    "code": 2,
+    "url": "../images/Camaro-wallpaper-55.jpg",
+    "title": "Camaro",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": true,
+    "col6": false
+  },
+
+  {
+    "code": 3,
+    "url": "../images/Police-Car-Wallpapers-23.jpg",
+    "title": "Police",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": true,
+    "col6": false
+  },
+  {
+    "code": 4,
+    "url": "../images/Audi-Wallpapers-34.jpg",
+    "title": "Audi",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": false,
+    "col6": true
+  },
+  {
+    "code": 5,
+    "url": "../images/Audi-Wallpapers-35.jpg",
+    "title": "Audi TT",
+    "titleColor": "black",
+    "textColor": "grey",
+    "col4": false,
+    "col6": true
+  },
+  {
+    "code": 6,
+    "url": "../images/Car-Wallpapers-1920x1080-67.jpg",
+    "title": "Police",
+    "titleColor": "black",
+    "textColor": "orange",
+    "col4": true,
+    "col6": false
+  },
+  {
+    "code": 7,
+    "url": "../images/Lamborghini-Veneno-wallpaper-77.jpg",
+    "title": "Lamborghini-Veneno",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": true,
+    "col6": false
+  },
+  {
+    "code": 8,
+    "url": "../images/Audi-Wallpapers-54.jpg",
+    "title": "Audi",
+    "titleColor": "black",
+    "textColor": "white",
+    "col4": true,
+    "col6": false
+  }
+
+]

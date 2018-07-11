@@ -1,0 +1,63 @@
+﻿<html ng-app="app">
+<head>
+    
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/font-styles.css" rel="stylesheet" />
+    <!--<base href="/">-->
+</head>
+<body ng-controller="homeController">
+    <nav class="sticky-top navbar navbar-expand-lg bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand sarpanch" href="#">Live</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse Acme" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="home">Home</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="customer">Customer</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="carshow">Car Show</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="admin">Admin</a>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="my-2 my-lg-0"><hidden-audio></hidden-audio></div>-->
+
+
+    </nav>
+
+    <div class="container" ui-view></div>
+
+
+    <!--<script src="scripts/angular.min.js"></script>-->
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-animate.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-route.min.js"></script>-->
+    <script src="scripts/app.js"></script>
+    <script src="directive/directives.js"></script>
+    <script src="controller/controllers.js"></script>
+    <script src="filter/filters.js"></script>
+
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="service/customerService.js"></script>
+    <script src="service/dataService.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>-->
+
+</body>
+
+</html>

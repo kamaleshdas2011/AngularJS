@@ -1,0 +1,36 @@
+﻿
+    <h1>Customer Manager</h1>
+    <div class="row mood-box">
+        <div class="col-sm-2">
+            <button class="btn"><i class="fa fa-th-large"></i>&nbsp;Card View</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn"><i class="fa fa-bars"></i>&nbsp; View</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn" ui-sref="addcustomer"><i class="fa fa-plus"></i>&nbsp;Add Customer</button>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group pull-right">
+
+                <label title="Switch strict search" class="switch">
+                    <input type="checkbox" ng-model="strict">
+                    <span class="slider round"></span>
+                </label>&nbsp;
+                <!--<input type="checkbox" checked data-toggle="toggle" data-style="slow" ng-model="strict">-->
+                <input class="form-control" type="text" placeholder="Search" ng-model="searchText.$" name="search">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <div ng-show="customers">
+        <div class="row cust-list">
+            <div class="card-columns">
+                <customer-card class="card handtool" ng-repeat="cust in customers|filter: searchText: strict" customer="cust"></customer-card>
+            </div>
+        </div>
+    </div>
+<div ng-show="!customers" class="jumbotron text-center">
+    <h1>{{error}}</h1>
+</div>

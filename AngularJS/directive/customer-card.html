@@ -1,0 +1,14 @@
+﻿<div ng-click="collapse()">
+    <img class="card-image-top img-thumbnail" ng-src="{{customer.imageUrl}}" alt="{{customer.firstName}}" />
+    <div class="card-body">
+        <h5 class="card-title">{{customer.firstName + ' ' + customer.lastName}}</h5>
+        <div id="info-card">
+            <p class="card-text">{{customer.role}}</p>
+            <div>Gender: {{customer.gender | genderFilter}}</div>
+        </div>
+    </div>
+</div>
+<div class="card-footer" ng-hide="collapsed">
+    <button class="btn btn-primary" ui-sref="customerdetails({id: customer.id})">See Profile</button>
+</div>
+

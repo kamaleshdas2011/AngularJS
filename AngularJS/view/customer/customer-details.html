@@ -1,0 +1,40 @@
+﻿<style>
+    .contact .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .contact .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .contact a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+        margin-top:15px;
+    }
+
+    .contact button:hover, a:hover {
+        opacity: 0.7;
+    }
+</style>
+<h1>Customer Details</h1>
+<div>
+    <div class="row contact">
+        <div class="col-md-5">
+            <div class="card">
+                <img ng-src="../../images/img_avatar3.png" alt="{{customer.firstName}}" style="width:100%">
+                <h1>{{customer.firstName + ' ' + customer.lastName}}</h1>
+                <span class="title">{{customer.role}} | {{customer.city.name}}</span>
+
+                <a class="btn btn-dark text-white" href="tel:{{customer.phoneNumber}}">
+                    <i class="fa fa-phone"></i>&nbsp;{{customer.phoneNumber}}
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7"></div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+﻿<form ng-submit="UploadPhoto()" name="photoUpload">
+    <div class="form-horizontal">
+        <!--<h4>Photos</h4>-->
+        <!--<hr />-->
+        <div class="form-group">
+            <label class="control-label col-md-2">Photo</label>
+            <div class="col-md-10">
+                <input type="file" class="form-control" name="file" ng-files required multiple />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Name</label>
+            <div class="col-md-12">
+                <input class="form-control" type="text" name="name" ng-model="photo.Name" required
+                       ng-disabled="files.length>1" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Place</label>
+            <div class="col-md-10">
+                <select class="form-control" ng-options="pl.Name for pl in places" ng-model="photo.Places" name="photo">
+                    <option value="" selected disabled>Select Place</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="isPrimary" ng-model="photo.Primary"
+                               ng-disabled="files.length>1" />Is Primary
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input ng-show="!seeUpdate" type="submit" value="Upload" class="btn btn-success" />
+                <button type="button" ng-show="seeUpdate" ng-click="photoUpload.$valid && startUpdate()" class="btn btn-dark">Update</button>
+                <input type="button" ng-click="resetForm()" value="Reset" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    {{photo|json}}
+    <ul>
+        <li ng-repeat="file in files">{{files.length}}{{file.name}}</li>
+    </ul>
+</form>
+    <br /><br /><br />
+    <div>
+        <div class="card-columns">
+            <div id="photodiv{{p.Id}}" class="card" ng-repeat="p in photos">
+                <img ondragstart="drag(event)" draggable="true" id="photoimg{{p.Id}}"
+                     class="card-img-top img-thumbnail" ng-src="data:image/jpeg;base64,{{p.Photo}}" />
+                <div id="photobody{{p.Id}}" class="card-body">
+                    <h5 id="title{{p.Id}}" class="card-title">{{p.Name}}</h5>
+                    <p id="text{{p.Id}}" class="card-text">{{p.Places.Name}} | {{p.Places.State.name}}</p>
+                </div>
+                <div style="padding:0 0 10px 10px;">
+                    <button class="btn btn-dark btn-sm" ng-click="update(p)">Update</button>
+                    <button class="btn btn-danger btn-sm" ng-click="delete(p)">Delete</button>
+                    <button ng-click="download(p)" class="btn"><i class="fa fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>

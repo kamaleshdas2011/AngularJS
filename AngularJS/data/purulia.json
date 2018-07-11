@@ -1,0 +1,58 @@
+﻿[
+  {
+    "id": 1,
+    "url": "../images/westbengal/purulia/Turga-Waterfalls-2.jpg",
+    "title": "Purulia",
+    "titleColor": "chocolate",
+    "textColor": "white"
+  },
+  {
+    "id": 2,
+    "url": "../images/westbengal/purulia/GarhpanchkotPurulia.jpg",
+    "title": "Garhpanchkot Resort, Purulia",
+    "titleColor": "black",
+    "textColor": "white"
+  },
+  {
+    "id": 3,
+    "url": "../images/westbengal/purulia/dsc_0180.jpg",
+    "title": "Journey to Infinity",
+    "titleColor": "white",
+    "textColor": "white"
+  },
+  {
+    "id": 4,
+    "url": "../images/westbengal/purulia/Garhpanchakot_pop_up.jpg",
+    "title": "Garhpanchkot Fort",
+    "titleColor": "black",
+    "textColor": "white"
+  },
+  {
+    "id": 5,
+    "url": "../images/westbengal/purulia/purulia1.jpg",
+    "title": "Baranti Village, Purulia",
+    "titleColor": "orange",
+    "textColor": "white"
+  },
+  {
+    "id": 6,
+    "url": "../images/westbengal/purulia/purulia2.jpg",
+    "title": "Baranti Lake, Purulia",
+    "titleColor": "green",
+    "textColor": "white"
+  },
+  {
+    "id": 7,
+    "url": "../images/westbengal/purulia/purulia3.jpg",
+    "title": "Baranti Village, Purulia",
+    "titleColor": "burlywood",
+    "textColor": "white"
+  },
+  {
+    "id": 8,
+    "url": "../images/westbengal/purulia/purulia.jpg",
+    "title": "Baranti, Purulia",
+    "titleColor": "darkseagreen",
+    "textColor": "white"
+  }
+]
